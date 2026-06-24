@@ -1,0 +1,56 @@
+.button {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  z-index: 80;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(212, 168, 67, 0.38);
+  border-radius: 8px;
+  background: rgba(15, 28, 46, 0.94);
+  color: var(--amber);
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(12px);
+  box-shadow: 0 12px 32px rgba(15, 28, 46, 0.24);
+  transition: opacity 0.25s ease, transform 0.25s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.button.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.button span {
+  width: 14px;
+  height: 14px;
+  border-top: 2px solid currentColor;
+  border-left: 2px solid currentColor;
+  transform: translateY(4px) rotate(45deg);
+}
+
+.button:hover,
+.button:focus-visible {
+  background: var(--amber);
+  border-color: var(--amber);
+  color: var(--navy);
+  transform: translateY(-2px);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--teal-light);
+  outline-offset: 4px;
+}
+
+@media (max-width: 640px) {
+  .button {
+    right: 20px;
+    bottom: 20px;
+    width: 44px;
+    height: 44px;
+  }
+}
