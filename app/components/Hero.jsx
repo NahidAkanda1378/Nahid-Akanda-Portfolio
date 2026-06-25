@@ -86,7 +86,7 @@ export default function Hero() {
         <div className={styles.copy}>
           <div className={`${styles.eyebrow} ${visible ? styles.visible : ''}`}>
             <span className={styles.dot} />
-            Chicago, IL · Open to Work
+            Chicago, IL · Open to Opportunities
           </div>
 
           <h1 className={`${styles.name} ${visible ? styles.visible : ''}`}>
